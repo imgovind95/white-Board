@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Board - AI Note Assistant</title>
+
+  <!-- Google Font for Handwritten Style -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- ✅ Required for download -->
+</head>
+<body>
+  <h1>Smart Board - AI Note Assistant</h1>
+
+  <div class="board-container">
+    <canvas id="smartBoardCanvas" width="1200" height="500"></canvas>
+
+    <div class="controls">
+      <button onclick="undo()">Undo</button>
+      <button onclick="redo()">Redo</button>
+      <button onclick="clearBoard()">Clear</button>
+      <button onclick="toggleDrawingMode()">✍️ Draw Mode (D)</button>
+      <button onclick="toggleTextMode()">💬 Text Mode (T)</button>
+      <button onclick="processText()">Process</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+
+      <input type="color" id="fontColor" value="#000000" />
+      <input type="number" id="fontSize" value="24" min="12" max="72" />
+    </div>
+
+    <input
+      type="text"
+      id="keyboardInput"
+      placeholder="Type here and press Enter to display on board..."
+      onkeydown="handleKeyInput(event)"
+    />
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf"></script>
+  <script src="script.js"></script>
+</body>
+</html>

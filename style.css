@@ -1,0 +1,98 @@
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e000;
+  font-family: 'Patrick Hand', cursive;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #ffcc00;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
+  padding: 10px;
+}
+
+canvas {
+  background-color: #ffffff;
+  border: 2px solid #888;
+  cursor: crosshair;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 16px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #222;
+  transform: scale(0.98);
+}
+
+input[type="color"],
+input[type="number"] {
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  padding: 0 6px;
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+#fontColor {
+  cursor: pointer;
+  border: none;
+  width: 50px;
+}
+
+#keyboardInput {
+  width: 90%;
+  max-width: 700px;
+  font-size: 20px;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-family: 'Patrick Hand', cursive;
+  box-shadow: 0 0 5px #00000066;
+  transition: border 0.3s ease;
+}
+
+#keyboardInput:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
