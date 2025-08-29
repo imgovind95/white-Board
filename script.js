@@ -217,4 +217,3 @@ function ensureCanvasSpace() {
     ctx.putImageData(oldData, 0, 0);
   }
 }
-
