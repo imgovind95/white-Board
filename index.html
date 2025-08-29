@@ -10,15 +10,24 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- ✅ Required for download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <h1>Smart Board - AI Note Assistant</h1>
 
   <div class="board-container">
-    <canvas id="smartBoardCanvas" width="1200" height="500"></canvas>
+    <!-- ✅ Scrollable Canvas Container -->
+    <div id="canvasContainer" style="height: 500px; overflow-y: scroll;">
+     <canvas id="smartBoardCanvas" width="1200" height="5000"></canvas>
+</div>
+    </div>
 
-    <div class="controls">
+    <!-- ✅ Slider Control -->
+    <input type="range" id="scrollSlider" min="0" max="2500" value="0" 
+           style="width: 1200px; margin-top:10px;" 
+           oninput="scrollCanvas(this.value)">
+
+    <div class="controls" style="margin-top:10px;">
       <button onclick="undo()">Undo</button>
       <button onclick="redo()">Redo</button>
       <button onclick="clearBoard()">Clear</button>
@@ -36,11 +45,12 @@
       id="keyboardInput"
       placeholder="Type here and press Enter to display on board..."
       onkeydown="handleKeyInput(event)"
+      style="margin-top:10px; width: 100%;"
     />
   </div>
 
-  <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/jspdf"></script>
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
