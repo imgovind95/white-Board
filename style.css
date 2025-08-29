@@ -96,3 +96,14 @@ input[type="number"] {
   border-color: #ffcc00;
   outline: none;
 }
+/* AIzaSyDRrzQ9l1XRYbPs955bJntG430W4OwiqrE */
+#canvasContainer {
+  height: 90vh;               /* screen ke 90% height */
+  overflow-y: scroll;         /* vertical scroll enable */
+  -ms-overflow-style: none;   /* IE/Edge ke liye */
+  scrollbar-width: none;      /* Firefox ke liye */
+}
+
+#canvasContainer::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Opera ke liye */
+}
